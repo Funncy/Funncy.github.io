@@ -51,7 +51,6 @@ header-img: img/review/2019-04-02-review-book-hyperledger-fabric-2-Cover.png
 구현 소스는 [Github 리파지토리](https://github.com/HyperledgerHandsOn/trade-finance-logistics)에 공개되어 있다.
 
 
-
 ## 누가 읽어야 하는가?
 ---
 
