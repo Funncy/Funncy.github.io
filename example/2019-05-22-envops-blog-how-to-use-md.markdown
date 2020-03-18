@@ -12,10 +12,12 @@ comments: true
 > 지금 당장 필요한 `마크다운(Markdown)` 문법부터 단계적으로 배워봅시다.  
   
 - 목차
+  - [Test/Test](#test-/-test)
 	- [Markdown이란?](#markdown이란) 
 	- [Markdown 에디터 뭘 쓸까?](#markdown-에디터-뭘-쓸까)
 	- [Markdown 문법1(반드시 알아야 하는)](#markdown-문법1반드시-알아야-하는)
 	- [Markdown 문법2(유용한 부가기능)](#markdown-문법2유용한-부가기능)
+  - [실전](#실전)
 	- [실전연습](#실전연습)
 	- [이미지를 쉽게 업로드 하는 방법](#이미지를-쉽게-업로드-하는-방법)
 	- [소소한 Tip 그리고 고장났을 때](#소소한-tip-그리고-고장났을-때)
@@ -226,6 +228,9 @@ __볼드로 진하게 만들다가*이탤릭으로 기울이고*다시 볼드로
   
 이상 글을 쓸 때 매번 사용하는 Markdown의 문법을 알아보았다. 
 
+## Test / Test
+--dkdk
+
 ## Markdown 문법2(유용한 부가기능)  
 ---
 이 Chapter에서 배울 것들은 위의 기능보다는 사용 빈도가 낮지만 굉장히 고차원 적인 표현을 가능하게 해주는 매우 유용한 문법들이다. 필요할 때마다 참고하여 익히면 큰 도움이 될 것이다.  
@@ -304,6 +309,7 @@ py_vector.dot(torch_vector)
 > * [Flow charts](http://flowchart.js.org/)
 > * [Sequence diagrams](https://bramp.github.io/js-sequence-diagrams/)
   
+## 실전
 
 ## 실전연습  
 ---
