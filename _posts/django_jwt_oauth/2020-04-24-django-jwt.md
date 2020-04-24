@@ -14,18 +14,18 @@ comments: true
 
 ### 0. JWT 인증
 
-Django Rest Framework 에서 기본적으로 지원하는 Token 은 User 와 1:1 매칭되는 단순한 랜덤문자이다.
+`Django Rest Framework` 에서 기본적으로 지원하는 `Token` 은 `User` 와 1:1 매칭되는 단순한 랜덤문자이다.
 
-JWT(JSON WEB TOKEN)은 토큰 자체에 데이터를 가지고 있다.
+`JWT(JSON WEB TOKEN)`은 토큰 자체에 데이터를 가지고 있다.
 + 포맷 : 헤더.내용.서명
 + 로직만으로 인증이 가능
 
-Token은 반드시 안전한 장소에 보관해야합니다.
-App에서는 SharedPreferences에 저장하도록 합시다.
+`Token`은 반드시 안전한 장소에 보관해야합니다.
+`App`에서는 `SharedPreferences`에 저장하도록 합시다.
 
 ### 1. Django 프로젝트 준비
 
-먼저 Django 기본 프로젝트에 RestFramework와 JWT를 설치해줍시다.
+먼저 `Django` 기본 프로젝트에 `RestFramework`와 `JWT`를 설치해줍시다.
 
 ```python
 pip install djangorestframework
@@ -33,9 +33,9 @@ pip install djangorestframework-jwt
 ```
 
 프로젝트/urls.py에 url과 패키지를 등록합시다.
-+ obtain_jwt_token : 토큰 획득
-+ refresh_jwt_token : 토큰 갱신
-+ verify_jwt_token : 토큰 확인
++ `obtain_jwt_token` : 토큰 획득
++ `refresh_jwt_token` : 토큰 갱신
++ `verify_jwt_token` : 토큰 확인
 
 ```python
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token, verify_jwt_token
@@ -48,14 +48,14 @@ urlpatterns = [
 ]
 ```
 
-settings.py에서 REST_FRAMEWORK 세팅값을 설정해줍시다.
-그리고 JWT 설정을 해줍니다.
+settings.py에서 `REST_FRAMEWORK` 세팅값을 설정해줍시다.
+그리고 `JWT` 설정을 해줍니다.
 
-+ JWT_EXPIRATION_DELTA : oken 만료시간으로 기본값은 5분 입니다. 5분은 너무 짧으니 늘려 줍시다.
-+ JWT_ALLOW_REFRESH : Token Refresh가 가능하도록 해줘야 합니다. 따라서 True로 바꾸어 줍니다.
-+ JWT_REFRESH_EXPIRATION_DELTA : Refresh 가능 시간 입니다. 상식적으로 만료 되기전에 Refresh를 하는게 맞으므로 위의 JWT_EXPIRATION_DELTA 시간보다 짧게 해주면 됩니다.
++ `JWT_EXPIRATION_DELTA` : `Token` 만료시간으로 기본값은 5분 입니다. 5분은 너무 짧으니 늘려 줍시다.
++ `JWT_ALLOW_REFRESH` : `Token Refresh`가 가능하도록 해줘야 합니다. 따라서 `True`로 바꾸어 줍니다.
++ `JWT_REFRESH_EXPIRATION_DELTA` : `Refresh` 가능 시간 입니다. 상식적으로 만료 되기전에 `Refresh`를 하는게 맞으므로 위의 `JWT_EXPIRATION_DELTA` 시간보다 짧게 해주면 됩니다.
 
-+ REST_USE_JWT : Token 발급 시 JWT를 기본으로 사용하도록 합니다.
++ `REST_USE_JWT` : `Token` 발급 시 `JWT`를 기본으로 사용하도록 합니다.
 
 ```python
 ...
@@ -93,22 +93,22 @@ REST_USE_JWT = True
 
 ### 2. allauth rest_auth 설정
 
-이제 app단에서 Access token을 서버로 보내서 jwt토큰으로 변경합니다.
+이제 app단에서 `Access token`을 서버로 보내서 `jwt`토큰으로 변경합니다.
 
-일단 소셜로그인 진행할 개발자사이트에서 web플랫폼으로 현재 django 프로젝트를 연결해줍시다. (로컬환경이니 http://127.0.0.1:8000 으로 했습니다.)
+일단 소셜로그인 진행할 개발자사이트에서 `web`플랫폼으로 현재 `django` 프로젝트를 연결해줍시다. (로컬환경이니 http://127.0.0.1:8000 으로 했습니다.)
 
 #### 2-1. rest-auth, allauth
 
 패키지를 설치합시다.
-+ allauth : 소셜로그인을 연동하기 위한 패키지입니다.
-+ rest-auth : allauth와 연동하여 rest로 연결해줍니다.
++ `allauth` : 소셜로그인을 연동하기 위한 패키지입니다.
++ `rest-auth` : `allauth`와 연동하여 `rest`로 연결해줍니다.
 
 ```python
 pip install django-rest-auth
 pip install django-allauth
 ```
 
-settings.py에서 INSTALLED_APP을 추가해줍시다.
+settings.py에서 `INSTALLED_APPS` 을 추가해줍시다.
 
 ```python
 INSTALLED_APPS = (
@@ -123,13 +123,13 @@ INSTALLED_APPS = (
 )
 ```
 
-그리고 settings.py에 SITE_ID 기본값을 설정해줍시다.
+그리고 settings.py에 `SITE_ID` 기본값을 설정해줍시다.
 
 ```python
 SITE_ID = 1
 ```
 
-urls.py에 다음처럼 등록해줍시다.
+`urls.py` 에 다음처럼 등록해줍시다.
 
 ```python
 urlpatterns = [
@@ -139,7 +139,7 @@ urlpatterns = [
 ]
 ```
 
-그리고 migrate를 진행해줍시다.
+그리고 `migrate`를 진행해줍시다.
 
 ```python
 python manage.py migrate
@@ -147,8 +147,8 @@ python manage.py migrate
 
 #### 2-2. Social Authentication 등록
 
-이제 INSTALLED_APPS에 allauth.socialaccount와 내가 연동할 providers를 추가합니다. 
-저는 facebook과 kakao를 연동해보겠습니다.
+이제 `INSTALLED_APPS`에 `allauth.socialaccount`와 내가 연동할 `providers`를 추가합니다. 
+저는 `facebook`과 `kakao`를 연동해보겠습니다.
 
 ```python
 INSTALLED_APPS = [
@@ -170,7 +170,7 @@ INSTALLED_APPS = [
 
 #### 2-3. SNS 등록
 
-accounts 라는 앱을 만들어서 urls.py에 등록해줍시다.
+`accounts` 라는 앱을 만들어서 urls.py에 등록해줍시다.
 
 ```python
 urlpatterns = [
@@ -180,7 +180,7 @@ urlpatterns = [
 ]
 ```
 
-이제 연동할 SNS 별로 url을 설정해줍시다.
+이제 연동할 `SNS` 별로 url을 설정해줍시다.
 
 ```python
 from .views import KakaoLogin, FacebookLogin
@@ -209,19 +209,19 @@ class FacebookLogin(SocialLoginView):
 
 #### 2-4. django admin 등록
 
-django admin에서 Social Accounts > Social applications > Add social application를 클릭해서 등록해줍시다.
+`django admin`에서 `Social Accounts` > `Social applications` > `Add social application`를 클릭해서 등록해줍시다.
 
-provider와 이름(임의로) ClientID, SecretKey를 등록해줍시다.
-* Kakao는 SecretKey가 없습니다.
+`provider`와 `이름(임의로)`, `ClientID`, `SecretKey`를 등록해줍시다.
+* `Kakao`는 `SecretKey`가 없습니다.
 
-그리고 Sites에서 example.com을 연결해줍니다.
+그리고 `Sites`에서 `example.com`을 연결해줍니다.
 
 ## 이미지
 
 ### 3. 연동 테스트
 
-앱에서 직접 access token을 서버로 보내서 테스트해볼수있습니다.
-아니면 개발자 사이트에서 access token을 직접 받아서 진행해도 됩니다.
+앱에서 직접 `access token`을 서버로 보내서 테스트해볼수있습니다.
+아니면 개발자 사이트에서 `access token`을 직접 받아서 진행해도 됩니다.
 
-저는 먼저 개발자 사이트에서 access token을 받아서 post man 으로 테스트해보겠습니다.
+저는 먼저 개발자 사이트에서 `access token`을 받아서 `post man` 으로 테스트해보겠습니다.
 
