@@ -86,7 +86,18 @@ REST_USE_JWT = True
 ```
 
 상단 url에서 테스트를 진행해봅시다.
-## JWT 토큰 테스트
+
+저는 `postman`으로 진행했으며 `url`에서 진행해도 됩니다. (`django-rest-framework`에서 `rest-api`화면 제공)
+`Body`에 `username`과 `password`를 `post`로 보내주면 `jwt token`이 발행됩니다.
+![이미지](https://Funncy.github.io/assets/img/django-jwt/2020-04-24-django-jwt-01.png "get jwt token")
+
+`/api-jwt-auth/verify/`에서는 `jwt token`이 문제없으면 그대로 반환해줍니다.
+
+![이미지](https://Funncy.github.io/assets/img/django-jwt/2020-04-24-django-jwt-02.png "verify jwt token")
+
+`/api-jwt-auth/refresh/`에서는 `token`을 재발급해줍니다.
+
+![이미지](https://Funncy.github.io/assets/img/django-jwt/2020-04-24-django-jwt-03.png "refresh jwt token")
 
 문제가 없으면 다음 단계를 진행합니다.
 
@@ -216,12 +227,64 @@ class FacebookLogin(SocialLoginView):
 
 그리고 `Sites`에서 `example.com`을 연결해줍니다.
 
-## 이미지
+![이미지](https://Funncy.github.io/assets/img/django-jwt/2020-04-24-django-jwt-04.png "django admin registration site")
 
 ### 3. 연동 테스트
 
 앱에서 직접 `access token`을 서버로 보내서 테스트해볼수있습니다.
 아니면 개발자 사이트에서 `access token`을 직접 받아서 진행해도 됩니다.
 
-저는 먼저 개발자 사이트에서 `access token`을 받아서 `post man` 으로 테스트해보겠습니다.
+먼저 개발자 사이트에서 `access token`을 받아옵니다.
+
+![이미지](https://Funncy.github.io/assets/img/django-jwt/2020-04-24-django-jwt-06.png "kakao accesstoken")
+
+그리고 `access token`을 `/rest-auth/kakao`에 넘겨주면 `jwt token`을 발행해줍니다.
+토큰과 함께 유저 정보도 넘겨줍니다.
+
+![이미지](https://Funncy.github.io/assets/img/django-jwt/2020-04-24-django-jwt-05.png "get kakao jwt token")
+
+### 4. permission 
+
+이제 기본적인 설정이 끝났고 일반 `app`에 `permission`을 연결해보겠습니다.
+
+예시로 일단 `User`정보를 가져와 뿌려주는 `API`를 만들어보았습니다.
+
+```python
+# Serializers define the API representation.
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ["url", "username", "email", "is_staff"]
+
+
+# ViewSets define the view behavior.
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JSONWebTokenAuthentication]
+
+
+# Routers provide an easy way of automatically determining the URL conf.
+router = routers.DefaultRouter()
+router.register(r"users", UserViewSet)
+```
+
+`UserSerializer` : `rest-api`로 보여주기 위한 `model`의 `serializer` 입니다.
++ model : `Serializer`에 연결할 `model`을 입니다.
++ fields : `model`에서 보여줄 field입니다. 모두 보여주고싶다면 `fields = '__all__'` 해주면됩니다.
+
+`UserViewSet` : `rest-api`에서 `serializer`와 연결하여 정보를 뿌려줍니다.
++ queryset : `Serializer`와 연결하여 보여줄 정보들의 집합입니다. 여기서는 모든 유저들을 가져왔습니다.
++ serializer_class : 연결할 `Serializer`입니다. `queryset`의 데이터들을 `Serialzier`화 합니다.
++ permission_classes : 이번 `jwt token`을 사용하기 위한 권한설정입니다. `IsAuthenticated`는 로그인된 유저만 접근 가능합니다.
++ authentication_classes : 로그인과 관련된 `authentication`를 `JWT`방식으로 설정합니다.
+
+이렇게 설정하고 `postman`으로 `jwt token`을 넣어서 접근해보겠습니다.
++ `jwt token`을 `Headers`에 `Authorization` : `jwt 123123123123~~`이런식으로 인력해주어야합니다.
+
+![이미지](https://Funncy.github.io/assets/img/django-jwt/2020-04-24-django-jwt-07.png "permission jwt")
+
+정상적으로 잘 작동합니다.
+
 
