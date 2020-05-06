@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Django] -  tailwindcss 설치하기 "
+title: "[Django] -  tailwind css 설치하기 "
 subtitle:   "Django - tailwindcss "
 categories: django
 tags: django tailwindcss css sass gulp
@@ -10,12 +10,12 @@ comments: true
 `Django`프로젝트를 진행하며 `front-end`에 대해서 고민하게 되면서 `tailwindcss`를 알게되었다.
 설치법을 여기 공부겸 정리해보겠다.
 
-+ 1. npm init
-+ 2. gulp 설치
-+ 3. tailwindcss 설치
-+ 4. gulpfile.js 설정
-+ 5. npm run css
-
+###### 1. npm init
+###### 2. gulp 설치
+###### 3. tailwindcss 설치
+###### 4. gulpfile.js 설정
+###### 5. npm run css
+###### 6. customizing
 ---
 
 ### 1. npm init
@@ -138,5 +138,42 @@ npm run css
 그러면 `static/css`에 `styles.css`가 생성된다.
 이제 `django-template`에서 불러와서 사용하면된다.
 
+---
 
+## 6. Customizing
+
+사용하다보면 추가적인 수정이 필요할때가 있다.
+
+예를 들어 `height`의 속성중 `screen/2`같이 새로 만들어내고 싶을때 아래와 같이 수정하면 된다.
+
+`tailwindcss.config.js`파일을 열어서 수정한다.
+
+나는 `height`를 수정해보겠다.
+
+```js
+module.exports = {
+  purge: [],
+  theme: {
+    extend: {
+      height: theme => ({
+        "screen/2": "50vh",
+        "screen/3": "calc(100vh / 3)",
+        "screen/4": "calc(100vh / 4)",
+        "screen/5": "calc(100vh / 5)",
+        "65": "25rem",
+      }),
+      width: theme => ({
+        "65": "25rem",
+      }),
+    },
+  },
+  variants: {},
+  plugins: [],
+}
+
+```
+
+이렇게 작성이 끝나고 다시 `npm run css`를 실행하면 끝이다.
+
+> 크롬의 `css`파일 쿠키와 세션을 날려주자.
 
