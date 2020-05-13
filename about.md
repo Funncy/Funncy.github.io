@@ -55,56 +55,56 @@ B.S, Sejong University, Computer Engineering
 
 + ##### TodoDrive+ Application (Android, IOS) - 2019 : TodoWorks
 <img src="https://Funncy.github.io/assets/img/about/tododrive.png" width="100"> 
-Bluetooth Based TodoDrive Control Application 
-Using Dart(Flutter) ,Java, Kotlin, Object-C, Swift - CrossPlatform
+Bluetooth Based TodoDrive Control Application.
+Using Dart(Flutter) ,Java, Kotlin, Object-C, Swift - CrossPlatform.
 This is an application that controls TOODrive using Bluetooth.
 
 + ##### Self-fitting Web - 2020 : TodoWorks 
-Web based Self-fitting Website `(85,078 lines)`
-Using JavaScript, HTML, CSS, Python(Django), DB(MariaDB), ElasticBeanstalk
+Web based Self-fitting Website `(85,078 lines)`.
+Using JavaScript, HTML, CSS, Python(Django), DB(MariaDB), ElasticBeanstalk.
 This is a web site for measure customer's body on wheelchair.
 
 + ##### [Online Judge System](#https://github.com/mattJS17/OnlineJudge_Web) - 2017 : Sejong University
 Web based Code Judgement System (Supports C, C++, Java, Python Judgement)
 			- https://ex-oj.sejong.ac.kr/
-		Using JavaScript, HTML, CSS, PHP, DB(MySQL), C++
-		Supported by Sejong University
-		In use by every student in Sejong University for Python Lecture
-		In use by every student in Sejong University Software College for 
-		C Programming, Advance C Programming, Data Structure, Algorithms Lecture
+Using JavaScript, HTML, CSS, PHP, DB(MySQL), C++.
+Supported by Sejong University.
+In use by every student in Sejong University for Python Lecture.
+In use by every student in Sejong University Software College for
+C Programming, Advance C Programming, Data Structure, Algorithms Lecture
 
 ---
 
 + ##### [Sejong Graduation Management System](#https://github.com/mattJS17/graduation-management-system) - 2018 : Sejong University
 Web based Graduation Judgement System
 			- http://gms.sejong.ac.kr
-		Using JAVA, Spring Boot, DB(MySQL), HTML, CSS
-		Supported by Sejong University Software College
-		Will be in used by every student & managers in Sejong University for                   		Graduation Evaluation
+Using JAVA, Spring Boot, DB(MySQL), HTML, CSS.
+Supported by Sejong University Software College
+Will be in used by every student & managers in Sejong University for                   		Graduation Evaluation
 
 ---
 
 + ##### [SW Project Team Matching Application](#https://github.com/mattJS17/hack_17_06) - 2017 : Sejong University
 Using Java, HTML, CSS, Android, DB(SQL)
-		In 2nd SW Hackerton
+In 2nd SW Hackerton
 
 ---
 
 + ##### [Theater Management Program](#https://github.com/mattJS17/2017_DB-TheaterManagementProgram) - 2017 : Sejong University
 Using C, DB(ORACLE), LINUX
-		In Database, Team Project
+In Database, Team Project
 
 ---
 
 + ##### [Restaurant Data Management & Reservation System](#https://github.com/mattJS17/hackathon) - 2016 : Sejong University
 Using JAVA, DB(MySQL), Android
-		In 1st SW Hackerton
+In 1st SW Hackerton
 
 ---
 
 + ##### [Shooting Star Game](#https://github.com/mattJS17/2016_JAVA-ShootingStar) - 2016 : Sejong University
 Using JAVA
-		In JAVA Programming
+In JAVA Programming
 
 
 ---
