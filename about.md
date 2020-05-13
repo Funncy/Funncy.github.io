@@ -112,8 +112,8 @@ Using JAVA
 
 ## Awards 
 
-+ ###### 3rd SW Hackerton `Grand Prize` - 2017 sejong university
-+ ###### 1st SW Hackerton `Silver Prize` - 2016 sejong university
-+ ###### 5th Creative Design Competition `Silver Prize` - 2018 sejong university
-+ ###### 4th SW Coding Contest `Third Prize` - 2017 sejong university
-+ ###### 2nd SW Hackerton `Bronze Prize` - 2017 sejong university
++ ###### 3rd SW Hackerton `Grand Prize` - 2017 Sejong university
++ ###### 1st SW Hackerton `Silver Prize` - 2016 Sejong university
++ ###### 5th Creative Design Competition `Silver Prize` - 2018 Sejong university
++ ###### 4th SW Coding Contest `Third Prize` - 2017 Sejong university
++ ###### 2nd SW Hackerton `Bronze Prize` - 2017 Sejong university
