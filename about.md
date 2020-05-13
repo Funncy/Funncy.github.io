@@ -16,12 +16,12 @@ Github pages 블로그를 운영하는 중입니다. 회사 일을 하며 또 �
 
 ## Work Experience
 
-###### 2018/11 ~ 2019/06 : GMS 
+###### 2018/11 ~ 2019/06 - GMS 
 + Development of Graduation Management System
 
-###### 2019/09 ~ NOW : TodoWorks
+###### 2019/09 ~ NOW - TodoWorks
 + Senior Researcher
-+ Development of Application , Web and Server
++ Development of Application, Web and Server
 
 ## Education
 
@@ -112,8 +112,8 @@ Using JAVA
 
 ## Awards 
 
-+ ###### 3rd SW Hackerton `Grand Prize` - 2017 Sejong university
-+ ###### 1st SW Hackerton `Silver Prize` - 2016 Sejong university
-+ ###### 5th Creative Design Competition `Silver Prize` - 2018 Sejong university
-+ ###### 4th SW Coding Contest `Third Prize` - 2017 Sejong university
-+ ###### 2nd SW Hackerton `Bronze Prize` - 2017 Sejong university
++ ###### 3rd SW Hackerton `Grand Prize` - 2017 Sejong University
++ ###### 1st SW Hackerton `Silver Prize` - 2016 Sejong University
++ ###### 5th Creative Design Competition `Silver Prize` - 2018 Sejong University
++ ###### 4th SW Coding Contest `Third Prize` - 2017 Sejong University
++ ###### 2nd SW Hackerton `Bronze Prize` - 2017 Sejong University
