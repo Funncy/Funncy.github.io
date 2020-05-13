@@ -90,8 +90,8 @@ Using Java, HTML, CSS, Android, DB(SQL)
 ---
 
 + ##### [Theater Management Program](#https://github.com/mattJS17/2017_DB-TheaterManagementProgram) - 2017 : Sejong University
-Using Java, HTML, CSS, Android, DB(SQL)
-		In 2nd SW Hackerton
+Using C, DB(ORACLE), LINUX
+		In Database, Team Project
 
 ---
 
