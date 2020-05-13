@@ -14,6 +14,15 @@ Github pages 블로그를 운영하는 중입니다. 회사 일을 하며 또 �
 * 관심있는 분야는 App,Web,AI입니다.
 * 잡다한 개발자입니다 ㅠ
 
+## Work Experience
+
+###### 2018/11 ~ 2019/06 : GMS 
++ Development of Graduation Management System
+
+###### 2019/09 ~ NOW : TodoWorks
++ Senior Researcher
++ Development of Application , Web and Server
+
 ## Education
 
 ###### 2012/03 ~ 2019/02 
@@ -44,7 +53,17 @@ B.S, Sejong University, Computer Engineering
 
 ---
 
-+ ##### [Online Judge System](#https://github.com/mattJS17/OnlineJudge_Web) - 2017
++ ##### TodoDrive+ Application - 2019 : TodoWorks
+Bluetooth Based TodoDrive Control Application 
+Using Dart(Flutter) ,Java, Kotlin, Object-C, Swift - CrossPlatform
+This is an application that controls TOODrive using Bluetooth.
+
++ ##### Self-fitting Web - 2020 : TodoWorks
+Web based Self-fitting Website 
+Using JavaScript, HTML, CSS, Python(Django), DB(MariaDB), ElasticBeanstalk
+This is a web site for measure customer's body on wheelchair.
+
++ ##### [Online Judge System](#https://github.com/mattJS17/OnlineJudge_Web) - 2017 : Sejong University
 Web based Code Judgement System (Supports C, C++, Java, Python Judgement)
 			- https://ex-oj.sejong.ac.kr/
 		Using JavaScript, HTML, CSS, PHP, DB(MySQL), C++
@@ -55,7 +74,7 @@ Web based Code Judgement System (Supports C, C++, Java, Python Judgement)
 
 ---
 
-+ ##### [Sejong Graduation Management System](#https://github.com/mattJS17/graduation-management-system) - 2018
++ ##### [Sejong Graduation Management System](#https://github.com/mattJS17/graduation-management-system) - 2018 : Sejong University
 Web based Graduation Judgement System
 			- http://gms.sejong.ac.kr
 		Using JAVA, Spring Boot, DB(MySQL), HTML, CSS
@@ -64,25 +83,25 @@ Web based Graduation Judgement System
 
 ---
 
-+ ##### [SW Project Team Matching Application](#https://github.com/mattJS17/hack_17_06) - 2017
++ ##### [SW Project Team Matching Application](#https://github.com/mattJS17/hack_17_06) - 2017 : Sejong University
 Using Java, HTML, CSS, Android, DB(SQL)
 		In 2nd SW Hackerton
 
 ---
 
-+ ##### [Theater Management Program](#https://github.com/mattJS17/2017_DB-TheaterManagementProgram) - 2017
++ ##### [Theater Management Program](#https://github.com/mattJS17/2017_DB-TheaterManagementProgram) - 2017 : Sejong University
 Using Java, HTML, CSS, Android, DB(SQL)
 		In 2nd SW Hackerton
 
 ---
 
-+ ##### [Restaurant Data Management & Reservation System](#https://github.com/mattJS17/hackathon) - 2016
++ ##### [Restaurant Data Management & Reservation System](#https://github.com/mattJS17/hackathon) - 2016 : Sejong University
 Using JAVA, DB(MySQL), Android
 		In 1st SW Hackerton
 
 ---
 
-+ ##### [Shooting Star Game](#https://github.com/mattJS17/2016_JAVA-ShootingStar) - 2016
++ ##### [Shooting Star Game](#https://github.com/mattJS17/2016_JAVA-ShootingStar) - 2016 : Sejong University
 Using JAVA
 		In JAVA Programming
 
