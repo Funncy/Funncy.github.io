@@ -53,7 +53,7 @@ B.S, Sejong University, Computer Engineering
 
 ---
 
-+ ##### TodoDrive+ Application - 2019 : TodoWorks
++ ##### TodoDrive+ Application (Android, IOS) - 2019 : TodoWorks
 <img src="https://Funncy.github.io/assets/img/about/tododrive.png" width="100"> 
 Bluetooth Based TodoDrive Control Application 
 Using Dart(Flutter) ,Java, Kotlin, Object-C, Swift - CrossPlatform
