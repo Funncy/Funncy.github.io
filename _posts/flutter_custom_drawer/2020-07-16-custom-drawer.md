@@ -17,6 +17,8 @@ comments: true
 
 ### 1. 화면 설계
 
+---
+
 먼저 Panel의 Width와 Height 그리고 손잡이 Handler Width를 직접 지정해서 사용하게 해주고 싶었다.
 
 ```java
@@ -70,6 +72,8 @@ Positioned(
 ```
 
 ### 2. 애니메이션
+
+---
 
 자 이제 `Transform`과 `AnimationController`를 활용하여 슬라이드 효과를 줘보자.
 
@@ -372,7 +376,9 @@ void _onDragEnd(DragEndDetails details, IsOpenedProvider isOpenedProvider) {
 
 이제 정상적으로 Drag할 경우 동작한다.
 
-3. 추가 옵션
+### 3. 추가 옵션
+
+---
 
 여기서 추가로 옵션으로 설정한게
 
@@ -472,6 +478,8 @@ class _SlidePanelState extends State<SlidePanel> {
   }
 }
 ```
+
+[github - 소스코드 보기](https://github.com/Funncy/slide_panel)
 
 이제 모두 정상 작동한다.
 
