@@ -54,7 +54,7 @@ class _GoogleMapBodyState extends State<GoogleMapBody> {
 }
 ```
 
-![이미지](https://Funncy.github.io/assets/img/google_map/2020-07-21-google-map-01.png "기본 구글 맵")
+<img src="https://Funncy.github.io/assets/img/google_map/2020-07-21-google-map-01.png" height="700"> 
 
 > `myLocationButtonEnabled` 은 오른쪽 하단의 나의 위치로 가기 버튼을 On/Off 하는 변수이다.
 
@@ -91,7 +91,7 @@ List<Marker> _markers = [];
 
 이렇게 내부에 Marker를 생성해주었다. 
 
-![이미지](https://Funncy.github.io/assets/img/google_map/2020-07-21-google-map-02.png "기본 구글 맵 마커 생성")
+<img src="https://Funncy.github.io/assets/img/google_map/2020-07-21-google-map-02.png" height="700"> 
 
 기본적인 마커 생성은 쉽게 끝났다. 이제 드래그 이벤트를 진행해보자!
 
@@ -152,7 +152,7 @@ Stack(children: <Widget>[
 ])
 ```
 
-![이미지](https://Funncy.github.io/assets/img/google_map/2020-07-21-google-map-03.png "기본 구글 마커 이동")
+<img src="https://Funncy.github.io/assets/img/google_map/2020-07-21-google-map-03.png" height="700"> 
 
 이제 [Location](https://pub.dev/packages/location) 라이브러리를 활용하여 현재 위치를 받아오면 끝이다.
 
