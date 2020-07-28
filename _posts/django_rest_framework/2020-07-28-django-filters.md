@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[Django] - Viewset filter 설정 "
-subtitle:   "Django - Viewset filter setting "
+title: "[Django] - View filter 설정 "
+subtitle:   "Django - View filter setting "
 categories: django
 tags: django view filter
 comments: true
