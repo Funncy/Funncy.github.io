@@ -46,7 +46,7 @@ class LocationViewSet(viewsets.ModelViewSet):
 
 그리고 url을 다음과 같이 작성하여 검색을 진행해보자
 
-```python
+```
 http://example.com/api/users?search=russell
 ```
 

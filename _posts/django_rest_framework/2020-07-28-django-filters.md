@@ -67,7 +67,7 @@ class LocationViewSet(viewsets.ModelViewSet):
 
 이렇게 되면 url에서 다음과 같이 작성하면 정상 동작한다.
 
-```python
+```
 http://example.com/api/products?category=clothing
 ```
 
