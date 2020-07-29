@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Python] - 알고리즘 : 문자열 순열 알고리즘 "
-subtitle:   "Python - algorithm : permutations "
-categories: python
-tags: python algorithm
+title: "[Algorithm] - 알고리즘 : 문자열 순열 알고리즘 "
+subtitle:   "Algorithm - algorithm : permutations "
+categories: algorithm
+tags: algorithm
 comments: true
 ---
 
@@ -48,6 +48,28 @@ perm 을 살펴보면 문자열 입력이 들어오면 이제 재귀 형태로 �
 9. B를 제외한 문자열은 다시 문자를 반환하며 A가 나오고 다시 합쳐진다.
 10. c = B , cc = A (BA)가 들어간다.
 11. 이렇게 모든 순환을 마치면 모든 경우의 수가 나타난다.
+
+위의 코드를 응용하면 쉽게 조합(Combination)도 작성 할 수 있다.
+
+```python
+def perm(s):
+	if len(s) < 2:
+		return s
+	res = []
+	
+	for i, c in enumerate(s):
+		res.append(c) # 새로 추가 된 부분
+		for cc in perm(s[:i] + s[i+1:]):
+			res.append(c + cc)
+	return res
+
+if __name__ == "__main__":
+	val = "ABC"
+	print(perm(val))
+
+# ['A', 'AB', 'ABC', 'AC', 'ACB', 'B', 'BA', 'BAC', 
+#  'BC', 'BCA', 'C', 'CA', 'CAB', 'CB', 'CBA']
+```
 
 다음은 `Python itertools`에 있는 라이브러리 `permutations`를 분석해보았다.
 
