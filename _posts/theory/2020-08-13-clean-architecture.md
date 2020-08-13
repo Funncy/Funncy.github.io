@@ -167,7 +167,7 @@ class StableCalss {
 
 ```java
 class StableClass {
-		interface StableClassInterface {
+	interface StableClassInterface {
           void doSomething();
     }
     void myMethod(StableClassInterface param) {
