@@ -4,7 +4,7 @@ title: Flutter
 slug: flutter
 menu: true
 submenu: false
-order: 2
+order: 3
 description: >
   Flutter 공부 내용
 ---
