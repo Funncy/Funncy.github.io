@@ -300,3 +300,5 @@ MVVM 패턴에 대해서 유튜브와 여러 자료를 보면서 공부했지만
 아직 너무 간단한 앱들이라 실제로 어느정도 볼륨이 있는 앱을 만들어봐야 확실히 감이 올 것 같다
 
 아직 ViewModel의 역할 선을 어디까지 해줘야할지 잘 모르겠다
+
+[github](https://github.com/Funncy/flutter_news_app)
