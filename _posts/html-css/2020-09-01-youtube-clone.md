@@ -2,8 +2,8 @@
 layout: post
 title: "[HTML/CSS] - YOUTUBE Clone coding  "
 subtitle: "html/css - youtube clone coding"
-categories: programming
-tags: clonecoding youtube
+categories: web
+tags: html/css
 comments: true
 ---
 
