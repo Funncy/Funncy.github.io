@@ -42,8 +42,8 @@ $P(B|A) = \frac{P(B∩A | S)}{P(A|S)}$ 와 같다.
 $$
 $$
 
-- A1, A2 ... An ⇒ Partition of A
-- 배반 사건의 합
+- A1, A2 ... An ⇒ Partition of S
+- exclusive한 배반 사건 조각들의 합
 
 $$P(A1) = P(A_1∩A)=P(A|A_1)P(A_1)[*Conditional Prob]$$
 
