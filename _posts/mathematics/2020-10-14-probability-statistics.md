@@ -18,7 +18,9 @@ use_math: true
 
 ---
 
-$$P(A) = prob( outcome  ∈ A )$$
+$$
+P(A) = prob( outcome  ∈ A )
+$$
 
 - A가 발생할 확률
 
@@ -26,11 +28,15 @@ $$P(A) = prob( outcome  ∈ A )$$
 
 ---
 
-$$P(B\mid A) = \frac{P(B∩A)}{P(A)} : A라는 조건에서 B가 발생 할 확률$$
+$$
+P(B\mid A) = \frac{P(B∩A)}{P(A)} : A라는 조건에서 B가 발생 할 확률
+$$
 
 > A라는 전제 조건, A가 발생한 경우에서 B가 발생 할 확률
 
-$P(B\mid A) = \frac{P(B∩A\mid S)}{P(A\mid S)}$ 와 같다.
+$
+P(B\mid A) = \frac{P(B∩A\mid S)}{P(A\mid S)}
+$ 와 같다.
 
 전체집합 안에서 일어난 사건의 경우
 
@@ -83,7 +89,7 @@ $$P_{22}=P(y_2\mid x_2)\\P_{21}=P(y_2\mid x_1)\\P_{22}+P_{21}=1$$
 
 ---
 
-$P_{error}= Prob(x_1\quad trans,\quad y_2\quad receive) + Prob(x_2\quad trans, \quad y_2\quad recive)\\\quad\quad\quad=P(y_2\mid x_1)P(x_1) +P(y_1\mid x_2)P(x_2)$
+$P_{error}= Prob(x_1\quad trans,\quad y_2\quad receive) + Prob(x_2\quad trans, \quad y_2\quad recive) \\ \quad\quad\quad=P(y_2\mid x_1)P(x_1) +P(y_1\mid x_2)P(x_2)$
 
 > $P(y_2\mid x_1)P(x_1)$ : x1을 전송하고 그다음 y2가 오는 확률
 
@@ -130,4 +136,4 @@ ex) 3 coins tossing
 
 ⇒ 3 experiments of 1 coin tossing
 
-$$S_1=\{H,T\}\quad\quad\quad\quad\quad\quad\quad\quad\\S_2=\{H,T\}  \rightarrow S=S_1*S_2*S_3 \\S_3=\{H,T\}\quad\quad\quad\quad\quad\quad\quad\quad \\ =\{HHH,HHT,....,TTT\}$$
+$$S_1=\{H,T\}\quad\quad\quad\quad\quad\quad\quad\quad \\ S_2=\{H,T\}  \rightarrow S=S_1*S_2*S_3 \\S_3=\{H,T\}\quad\quad\quad\quad\quad\quad\quad\quad \\ =\{HHH,HHT,....,TTT\}$$
