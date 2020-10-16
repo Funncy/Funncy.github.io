@@ -18,9 +18,7 @@ use_math: true
 
 ---
 
-$$
-P(A) = prob( outcome  ∈ A )
-$$
+$$P(A) = prob( outcome  ∈ A )$$
 
 - A가 발생할 확률
 
@@ -28,15 +26,11 @@ $$
 
 ---
 
-$$
-P(B\mid A) = \frac{P(B∩A)}{P(A)} : A라는 조건에서 B가 발생 할 확률
-$$
+$$P(B\mid A) = \frac{P(B∩A)}{P(A)} : A라는 조건에서 B가 발생 할 확률$$
 
 > A라는 전제 조건, A가 발생한 경우에서 B가 발생 할 확률
 
-$
-P(B\mid A) = \frac{P(B∩A\mid S)}{P(A\mid S)}
-$ 와 같다.
+$P(B\mid A) = \frac{P(B∩A\mid S)}{P(A\mid S)}$ 와 같다.
 
 전체집합 안에서 일어난 사건의 경우
 
