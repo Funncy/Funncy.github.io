@@ -2,8 +2,10 @@
 layout: base
 ---
 
-{% include post.html post=page link_title=false %}
+<script
+  type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
 
-{% include about.html %}
-
-{% include related.html post=page %}
+{% include post.html post=page link_title=false %} {% include about.html %} {%
+include related.html post=page %}
