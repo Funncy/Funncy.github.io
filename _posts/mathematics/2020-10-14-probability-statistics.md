@@ -26,37 +26,38 @@ $$P(A) = prob( outcome  ∈ A )$$
 
 ---
 
-$$P(B|A) = \frac{P(B∩A)}{P(A)} : A라는 조건에서 B가 발생 할 확률$$
+$$
+P(B\mid A) = \frac{P(B∩A)}{P(A)} : A라는 조건에서 B가 발생 할 확률
+$$
 
 > A라는 전제 조건, A가 발생한 경우에서 B가 발생 할 확률
 
-$P(B|A) = \frac{P(B∩A | S)}{P(A|S)}$ 와 같다.
+$
+P(B\mid A) = \frac{P(B∩A\mid S)}{P(A\mid S)}
+$ 와 같다.
 
 전체집합 안에서 일어난 사건의 경우
 
-⇒ $P(B|A)$는 A라는 새로운 Sample Space에서 일어난 사건
+⇒ $P(B\mid A)$는 A라는 새로운 Sample Space에서 일어난 사건
 
 ## 4) Total Probability
 
 ---
 
-$$
-$$
-
 - A1, A2 ... An ⇒ Partition of S
 - exclusive한 배반 사건 조각들의 합
 
-$$P(A1) = P(A_1∩A)=P(A|A_1)P(A_1)[*Conditional Prob]$$
+$$P(A1) = P(A_1∩A)=P(A\mid A_1)P(A_1)[*Conditional Prob]$$
 
-$$\therefore P(A) = \Sigma^{n}_{i=1}P(A|A_i)P(A_i)$$
+$$\therefore P(A) = \Sigma^{n}_{i=1}P(A\mid A_i)P(A_i)$$
 
 ## 5) Bayesian Theorem
 
 ---
 
-$$P(B|A) = \frac{P(B∩A)}{P(A)} = \frac{P(A|B)P(B)}{P(A)}$$
+$$P(B\mid A) = \frac{P(B∩A)}{P(A)} = \frac{P(A\mid B)P(B)}{P(A)}$$
 
-$$\therefore P(A_i|A)=\frac{P(A|A_i)P(A_i)}{P(A)}$$
+$$\therefore P(A_i\mid A)=\frac{P(A\mid A_i)P(A_i)}{P(A)}$$
 
 - $A_i$는 Original, Input, 아직 정확히 모르는 것. 알아내야 할 것
 - $A$는 Observation, 이미 관측한 Data
@@ -74,11 +75,11 @@ $$x_1\quad\rightarrow\quad y_1 = P_{11} \\x_2\quad\rightarrow\quad y_2 = P_{22}\
 
 > $P_{11}=P_{22}, P_{12}=P_{21}$ ⇒ Symmetric, 대칭적이다.
 
-$P_{11}=P(y_1|x_1)$ : $x_1$을 보냈을 때(전제 조건), $y_1$을 받을 확률
+$P_{11}=P(y_1\mid x_1)$ : $x_1$을 보냈을 때(전제 조건), $y_1$을 받을 확률
 
-$$P_{11}=P(y_1|x_1)\\P_{12}=P(y_1|x_2)\\P_{11}+P_{12}=1$$
+$$P_{11}=P(y_1\mid x_1)\\P_{12}=P(y_1\mid x_2)\\P_{11}+P_{12}=1$$
 
-$$P_{22}=P(y_2|x_2)\\P_{21}=P(y_2|x_1)\\P_{22}+P_{21}=1$$
+$$P_{22}=P(y_2\mid x_2)\\P_{21}=P(y_2\mid x_1)\\P_{22}+P_{21}=1$$
 
 > Priori : 사전에 실험등을 통해서 알 수 있다.
 
@@ -86,23 +87,23 @@ $$P_{22}=P(y_2|x_2)\\P_{21}=P(y_2|x_1)\\P_{22}+P_{21}=1$$
 
 ---
 
-$P_{error}= Prob(x_1\quad trans,\quad y_2\quad receive) + Prob(x_2\quad trans, \quad y_2\quad recive)\\\quad\quad\quad=P(y_2|x_1)P(x_1) +P(y_1|x_2)P(x_2)$
+$P_{error}= Prob(x_1\quad trans,\quad y_2\quad receive) + Prob(x_2\quad trans, \quad y_2\quad recive)\\\quad\quad\quad=P(y_2\mid x_1)P(x_1) +P(y_1\mid x_2)P(x_2)$
 
-> $P(y_2|x_1)P(x_1)$ : x1을 전송하고 그다음 y2가 오는 확률
+> $P(y_2\mid x_1)P(x_1)$ : x1을 전송하고 그다음 y2가 오는 확률
 
 ### 2) when $y_2$ received, What prob of $x_1$ transmission?
 
 ---
 
-$$P(x_1|y_2) = (Baysion) \rightarrow \frac{P(y_2|x_1)P(x_1)}{P(y_2)}$$
+$$P(x_1\mid y_2) = (Baysion) \rightarrow \frac{P(y_2\mid x_1)P(x_1)}{P(y_2)}$$
 
-$$(total\quad probability)\rightarrow\frac{P(y_2|x_1)P(x_1)}{P(y_2|x_1)P(x_1)+P(y_2|x_2)P(x_2)}$$
+$$(total\quad probability)\rightarrow\frac{P(y_2\mid x_1)P(x_1)}{P(y_2\mid x_1)P(x_1)+P(y_2\mid x_2)P(x_2)}$$
 
-### 3) $P(x_1|error)$
+### 3) $P(x_1\mid error)$
 
 ---
 
-$$\rightarrow \frac{P(y_2|x_1)P(x_1)}{P(y_2|x_1)P(x_1)+P(y_1|x_2)p(x_2)}$$
+$$\rightarrow \frac{P(y_2\mid x_1)P(x_1)}{P(y_2\mid x_1)P(x_1)+P(y_1\mid x_2)p(x_2)}$$
 
 ## 1.8 Independent Events
 
@@ -110,7 +111,7 @@ $$\rightarrow \frac{P(y_2|x_1)P(x_1)}{P(y_2|x_1)P(x_1)+P(y_1|x_2)p(x_2)}$$
 
 ## If A and B are (mutually) independent.
 
-$$P(B|A)=P(B), \rightarrow P(A|B)=P(A)\\\rightarrow \frac{P(A∩B)}{P(A)}=P(B)$$
+$$P(B\mid A)=P(B), \rightarrow P(A\mid B)=P(A)\\\rightarrow \frac{P(A∩B)}{P(A)}=P(B)$$
 
 $$\therefore P(A∩B)=P(A)P(B)$$
 
@@ -127,7 +128,7 @@ $$\therefore P(A∩B)=P(A)P(B)$$
 
 - for tow experiments with $S1 \quad S2$
 
-$$S = S_1 *S_2 =\{(x_i,y_j) | x_i ∈S_1,y_j ∈S_2\}\\* : Cartesion \quad Product$$
+$$S = S_1 *S_2 =\{(x_i,y_j) \mid  x_i ∈S_1,y_j ∈S_2\}\\* : Cartesion \quad Product$$
 
 ex) 3 coins tossing
 
