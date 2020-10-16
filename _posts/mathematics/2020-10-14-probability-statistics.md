@@ -8,17 +8,19 @@ comments: true
 use_math: true
 ---
 
-## 1) Sample Space ⇒ S (set) : 전체 집합
+## 1) Sample Space ⇒ $S$ (set) : 전체 집합
 
 ---
 
 아웃풋이 랜덤 할 때, 결과의 모든 집합
 
-## 2) Event(A) ⇒ $A ⊂ S$ : 부분 집합
+## 2) Event(A) ⇒ $A \subset S$ : 부분 집합
 
 ---
 
-$$P(A) = prob( outcome  ∈ A )$$
+$$
+P(A) = prob( outcome  ∈ A )
+$$
 
 - A가 발생할 확률
 
