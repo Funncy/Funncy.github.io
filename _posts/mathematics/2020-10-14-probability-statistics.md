@@ -5,6 +5,7 @@ subtitle: "probability and statistics - conditional probability and Bayesian The
 categories: mathematics
 tags: mathematics
 comments: true
+use_math: true
 ---
 
 ## 1) Sample Space ⇒ S (set) : 전체 집합
