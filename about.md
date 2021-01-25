@@ -25,7 +25,7 @@ Github pages 블로그를 운영하는 중입니다. 회사 일을 하며 또 �
 - Senior Researcher
 - Development of Application, Web and Server
 
-###### 2020/11 ~ NOW - TodoWorks
+###### 2020/11 ~ NOW - Kangsters
 
 - CTO
 - Development of Application, Web and Server
