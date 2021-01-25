@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[확률과통계] - 조건부 확률과 Bayes 정리 "
-subtitle: "probability and statistics - conditional probability and Bayesian Theroem "
+title: '[확률과통계] - 조건부 확률과 Bayes 정리 '
+subtitle: 'probability and statistics - conditional probability and Bayesian Theroem '
 categories: mathematics
 tags: mathematics
 comments: true
