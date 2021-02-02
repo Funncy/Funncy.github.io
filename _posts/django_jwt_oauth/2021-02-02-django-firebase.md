@@ -7,8 +7,6 @@ tags: django android ios restframework jwt firebaase
 comments: true
 ---
 
-# Firebase + Django + Flutter Authentication
-
 이번 프로젝트에서는
 
 - Flutter : 화면
