@@ -368,9 +368,9 @@ QuerySnapshot의 내부 데이터 리스트에 접근한다.
 사실상 DocumentSnapshot과 같은 내용이다. DocumentSnapshot을 상속받았다.
 
 > 왜 굳이 따로 만들었는지는 Class에 주석으로 친절하게 나와있다.
-
-1. DocumentSnapshot과 다르게 항상 exists 가 true이다.
-2. data()가 절대 null을 반환하지 않는다.
+>
+> 1. DocumentSnapshot과 다르게 항상 exists 가 true이다.
+> 2. data()가 절대 null을 반환하지 않는다.
 
 ### 8-3-1. data()
 
