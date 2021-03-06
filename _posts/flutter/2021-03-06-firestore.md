@@ -15,7 +15,7 @@ Flutter에서 FireStore 사용했던 내용을 기록하였다.
 
 ---
 
-```java
+```javascript
 FirebaseFirestore firestore = FirebaseFirestore.instance;
 ```
 
@@ -23,7 +23,7 @@ FirebaseFirestore firestore = FirebaseFirestore.instance;
 
 하지만 이거 이전에 `Firebase.initializeApp()`을 실행해주어야 한다.
 
-```java
+```javascript
 import 'package:flutter/material.dart';
 
 // Import the firebase_core plugin
@@ -72,7 +72,7 @@ FireStore에서는 2가지 Read방식이 존재한다.
 
 한번 읽는 방식으로 우리에게 친숙하다.
 
-```java
+```javascriptscript
 var documentSnapshot = await users.doc(documentId).get();
 print(documentSnapshot.data());
 ```
@@ -85,7 +85,7 @@ Collection의 Stream을 받아서 전체 Documents의 변경 사항을 실시간
 
 Document의 Stream을 받아서 하나의 Document의 변경 사항을 실시간으로 받을 수 있다.
 
-```java
+```javascript
 Stream collectionStream = FirebaseFirestore.instance.collection('users').snapshots();
 Stream documentStream = FirebaseFirestore.instance.collection('users').doc('ABC123').snapshots();
 ```
@@ -100,7 +100,7 @@ Stream documentStream = FirebaseFirestore.instance.collection('users').doc('ABC1
 
 먼저 내용을 적을 collection을 생성 혹은 불러와보자.
 
-```java
+```javascript
 CollectionReference users = FirebaseFirestore.instance.collection('users');
 ```
 
@@ -108,17 +108,17 @@ CollectionReference users = FirebaseFirestore.instance.collection('users');
 
 ### 3-1. Document 아이디 자동 생성
 
-```java
+```javascript
 users.add({
-            'full_name': fullName, // John Doe
-            'company': company, // Stokes and Sons
-            'age': age // 42
-          });
+	full_name: fullName, // John Doe
+	company: company, // Stokes and Sons
+	age: age, // 42
+});
 ```
 
 나중에 Model을 사용한다면 다음과 같이 편하게 작성이 가능하다.
 
-```java
+```javascript
 class User {
   final String fullName;
   final String company;
@@ -151,7 +151,7 @@ users.add(userModel.toJson());
 
 ### 3-2. Document 아이디 지정 생성
 
-```java
+```javascript
 //위와 거의 동일 하나 id를 지정해 먼저 빈 document를 생성한다.
 users.doc('docId').set(userModel.toJson());
 ```
@@ -170,9 +170,9 @@ users.doc('docId').set(userModel.toJson());
 
 위에서 사용한 `set` 함수를 사용하면 된다.
 
-```java
-var test = await firebaseFirestore.collection('test').add({'data': 'test'});
-test.set({'haha': 'haha'});
+```javascript
+var test = await firebaseFirestore.collection('test').add({ data: 'test' });
+test.set({ haha: 'haha' });
 ```
 
 > set은 모두 대체 해버린다.
@@ -181,9 +181,9 @@ test.set({'haha': 'haha'});
 
 `update` 함수를 사용하면 된다.
 
-```java
-var test = await firebaseFirestore.collection('test').add({'data': 'test'});
-test.set({'data': 'test update', 'data2' : 'new data'});
+```javascript
+var test = await firebaseFirestore.collection('test').add({ data: 'test' });
+test.set({ data: 'test update', data2: 'new data' });
 ```
 
 > 기존 필드는 업데이트 되고,
@@ -191,7 +191,7 @@ test.set({'data': 'test update', 'data2' : 'new data'});
 
 그리고 특정 데이터 필드 영역 (ex. GeoPoint, Blob...) 은 클래스를 지원해준다.
 
-```java
+```javascript
 CollectionReference users = FirebaseFirestore.instance.collection('users');
 
 Future<void> updateUser() {
@@ -203,7 +203,7 @@ Future<void> updateUser() {
 }
 ```
 
-```java
+```javascript
 CollectionReference users = FirebaseFirestore.instance.collection('users');
 
 Future<void> updateUser() {
@@ -228,16 +228,16 @@ Future<void> updateUser() {
 
 ### 5-1. 전체 Document 삭제
 
-```java
+```javascript
 //document있다는 가정
 doc.delete();
 ```
 
 ### 5-2. 특정 Field 삭제
 
-```java
+```javascript
 doc.update({
-'data' : FieldValue.delete()
+	data: FieldValue.delete(),
 });
 ```
 
@@ -248,14 +248,13 @@ doc.update({
 만약 대량 트래픽이 발생하는 앱이라고 가정해보자.
 그곳에서 `좋아요` 버튼을 누르면 갯수를 증가시켜주는 기능을 만들었다.
 
-```java
-
+```javascript
 //특정 post를 찾았다는 가정 post => DocumentReference;
 var postSnapshot = await post.get();
 var currentLikes = postSnapshot.data()['likes'];
 
 //현재 값을 기준으로 증가
-post.update({'likes' : currentLikes + 1 });
+post.update({ likes: currentLikes + 1 });
 ```
 
 위와 같은 코드는 정상 작동 한다. 하지만 ! 트래픽이 몰렸을 경우
@@ -264,7 +263,7 @@ post.update({'likes' : currentLikes + 1 });
 
 이 문제를 해결하는 방법이 `Transaction`이다.
 
-```java
+```javascript
 DocumentReference doc =
         firebaseFirestore.collection('test').doc('6gDFEgWt6TE5mPVZLz8X');
 
@@ -299,7 +298,7 @@ transaction은 실행 도중 snapshot데이터가 변경되면 다시 처음부�
 
 set, update, delete등을 조합해서 사용 가능하다.
 
-```java
+```javascript
 WriteBatch batch = firebaseFirestore.batch();
 CollectionReference collection = firebaseFirestore.collection('test');
 
