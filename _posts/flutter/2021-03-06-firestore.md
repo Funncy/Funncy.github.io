@@ -77,7 +77,7 @@ var documentSnapshot = await users.doc(documentId).get();
 print(documentSnapshot.data());
 ```
 
-### 2-2. Readl-tiem Read
+### 2-2. Real-time Read
 
 stream을 이용해 변경되는 사항을 Stream으로 넘겨준다. 실시간 반영이 이루어진다.
 
