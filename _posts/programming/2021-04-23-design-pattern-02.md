@@ -15,7 +15,7 @@ comments: true
 
 만약 철권같은 게임을 만든다고 해보자.
 
-![이미지](https://Funncy.github.io/assets/img/programming/2021-04-23-pattern-01.png, 'Stratgey pattern 01')
+![이미지](https://Funncy.github.io/assets/img/programming/2021-04-23-pattern-01.png 'Stratgey pattern 01')
 
 위와 같이 Fighter class내부에서 Jump, Kick등이 정의되어있다.
 
@@ -25,7 +25,7 @@ comments: true
 
 캐릭터가 늘어날 수록 **유지보수가 어려워 질 것**이다.
 
-![이미지](https://Funncy.github.io/assets/img/programming/2021-04-23-pattern-02.png, 'Stratgey pattern 02')
+![이미지](https://Funncy.github.io/assets/img/programming/2021-04-23-pattern-02.png 'Stratgey pattern 02')
 
 위와 같이 **Interface를 활용**하여 Jump와 Kick을 빼줄 수 있다.
 
@@ -33,7 +33,7 @@ comments: true
 
 **중복된 코드**가 넘쳐나게 된다.
 
-![이미지](https://Funncy.github.io/assets/img/programming/2021-04-23-pattern-03.png, 'Stratgey pattern 03')
+![이미지](https://Funncy.github.io/assets/img/programming/2021-04-23-pattern-03.png 'Stratgey pattern 03')
 
 전략패턴은 위와 같이 Behavior interface를 만들어서 Fighter 클래스가 **교체할 수 있도록 만든 패턴**이다.
 
