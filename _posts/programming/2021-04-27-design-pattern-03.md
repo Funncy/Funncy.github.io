@@ -1,9 +1,9 @@
 ---
 layout: post
 title: '[Programming] - 디자인 패턴 03 : Command 패턴 '
-subtitle: 'design pattern stratgey'
+subtitle: 'design pattern command'
 categories: programming
-tags: designpattern stratgey
+tags: designpattern command
 comments: true
 ---
 
@@ -140,3 +140,5 @@ Command 추상클래스를 통해 캡슐화 하였다.
 그리하여 언제든 Button Class의 변경없이 교체 및 사용이 가능하다.
 
 단, Command 인터페이스에 정해놓은 규칙대로 사용이 가능하다.
+
+> 커맨드 패턴은 하나의 객체에 대해 하나의 동작의 설계 방식이다.(1 : 1)
