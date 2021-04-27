@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '[Programming] - 디자인 패턴 01 : 싱글톤 '
+title: '[Programming] - 디자인 패턴 01 : Singleton '
 subtitle: 'design pattern singleton'
 categories: programming
 tags: designpattern singleton

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '[Programming] - 디자인 패턴 02 : 전략 패턴 '
+title: '[Programming] - 디자인 패턴 02 : Stratgey 패턴 '
 subtitle: 'design pattern stratgey'
 categories: programming
 tags: designpattern stratgey
