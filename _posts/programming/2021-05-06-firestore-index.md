@@ -22,7 +22,7 @@ Firebase의 Firestore는 기본적으로 모든 document의 field들을 자동�
 
 ---
 
-![이미지](https://Funncy.github.io/assets/img/firestore-index/_2021-05-06__4.24.39.png)
+![이미지](https://Funncy.github.io/assets/img/firestore-index/1.png 'Firebase')
 
 위와 같은 이미지처럼 인덱스 테이블을 통해서 데이터를 조회한다.
 
@@ -32,19 +32,19 @@ Firebase의 Firestore는 기본적으로 모든 document의 field들을 자동�
 
 ---
 
-![이미지](https://Funncy.github.io/assets/img/firestore-index/_2021-05-06__4.26.00.png)
+![이미지](https://Funncy.github.io/assets/img/firestore-index/2.png)
 
 쿼리가 조합된 경우 위와 같은 이미지 처럼 인덱스 테이블들을 순회하며 해당 데이터를 찾아간다.
 
-![](https://Funncy.github.io/assets/img/firestore-index/_2021-05-06__4.33.25.png)
+![](https://Funncy.github.io/assets/img/firestore-index/3.png)
 
 하지만 위와 같이 avg_rating등과 같은 비교 연산이 들어간 index 테이블은 정렬이 되어있지 않는 문제로 순회 조회가 불가능하다.
 
 이런 경우에는 Composite indexes(복합 색인)로 처리가 가능하다.
 
-![이미지](https://Funncy.github.io/assets/img/firestore-index/_2021-05-06__4.34.46.png)
+![이미지](https://Funncy.github.io/assets/img/firestore-index/4.png)
 
-![이미지](https://Funncy.github.io/assets/img/firestore-index/_2021-05-06__4.36.20.png)
+![이미지](https://Funncy.github.io/assets/img/firestore-index/5.png)
 
 위와 같이 해결된다.
 
