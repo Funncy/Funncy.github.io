@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[Dart] -  async(async*) , yield(yield*) "
-subtitle: "Django - async(async*) , yield(yield*)"
+title: '[Dart] -  async(async*) , yield(yield*) '
+subtitle: 'Dart - async(async*) , yield(yield*)'
 categories: programming
 tags: programming dart async yield async* yield*
 comments: true
