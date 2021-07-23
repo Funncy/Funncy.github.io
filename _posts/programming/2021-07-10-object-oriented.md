@@ -7,6 +7,8 @@ tags: oop
 comments: true
 ---
 
+# 객체 지향
+
 ### 비용
 
 프로그램이 출시 이후 시간이 지날 수록 비용이 증가
@@ -175,7 +177,7 @@ public class Account {
 
 - 인터페이스를 통해 추상화
 
-![이미지](https://Funncy.github.io/assets/img/oop/_2021-07-20__10.28.15.png '추상화')
+![이미지](https://Funncy.github.io/assets/img/oop/1.png 'oop')
 
 - 추상타입을 통해 구현을 감춤.
 
@@ -255,3 +257,131 @@ public class DefaultNotifierFactory implements NotifierFactory {
 
 - 너무 빨리 추상화 하면 추상화를 잘못 할 수도 있다. (다시 돌아가야 할 수도)
 - 실제 변경 및 확장이 발생할 때 추상화 시도를 해보자.
+
+# 상속보단 조립
+
+---
+
+상속을 통해 개발을 하다보면 생각보다 문제가 발생함을 느끼게 된다.
+
+### 1. 상위 클래스의 변경이 어렵다
+
+![이미지](https://Funncy.github.io/assets/img/oop/2.png 'oop')
+
+잘못 상위 클래스를 변경하면 하위 클래스에 모두 영향이 미치기때문에 조심해야 한다.
+
+### 2. 다중상속의 문제
+
+![이미지](https://Funncy.github.io/assets/img/oop/3.png 'oop')
+
+상속 구조를 짜다보면 생각보다 다중상속을 어떻게 해야하는지 고민이 발생하기 시작한다.
+Java같은 언어는 다중상속을 지원하지 않는다.
+
+### 3. 잘못된 상속의 사용
+
+![이미지](https://Funncy.github.io/assets/img/oop/4.png 'oop')
+
+위 코드와 같이 ArrayList를 상속받아 구현한 코드에서
+
+put(Container 내부 함수)말고 부모의 함수도 모두 공개되므로 add(ArrayList의 내부 함수)를 직접 호출해서 사용할 경우 lug.size가 증가되지 않는 문제가 발생한다.
+
+### Composition으로 해결하자!
+
+---
+
+![이미지](https://Funncy.github.io/assets/img/oop/5.png 'oop')
+
+Storage를 상속하는 구조에서 Storage가 자식 요소로 Composition 하였다.
+
+![이미지](https://Funncy.github.io/assets/img/oop/6.png 'oop')
+
+ArrayList를 상속하는 구조에서 luggages로 자식 요소로 Composition 하였다.
+
+# 의존과 DI
+
+---
+
+프로그래밍을 하다보면 어쩔수 없이 코드들이 의존하게 된다.
+
+여기서 중요한건 의존 관계를 어떻게 구성해주느냐이다.
+
+- 의존은 변경이 전파될 가능성을 의미한다 (의존하는 대상이 변경되면 의존하는 부분의 코드가 변경되어야 할 가능성이 있다.)
+
+### 순환 의존
+
+![이미지](https://Funncy.github.io/assets/img/oop/7.png 'oop')
+
+위와 같이 순환의존(변경이 연쇄 전파될 가능성이 있다) 하고 있는 경우 매우 위험하다.
+
+- 클래스, 패키지, 모듈 등 모든 수준에서 순환 의존은 막아야 한다.
+
+### 의존이 많은 경우
+
+---
+
+1. 한 클래스의 기능이 많은 경우
+
+   ⇒ 기능 별로 분리를 고려
+
+2. 의존 대상들을 하나로 묶어보기
+
+> 여기서 주의할 점은 의존 대상을 직접 생성하면
+> 생성하고 있는 클래스가 변경되면 의존하는 코드도 수정되어야 한다. (추상화 참고)
+
+### 의존 대상을 직접 생성하지 않는 방법
+
+---
+
+1. 팩토리, 빌더
+2. 의존 주입 (Dependency Injection)
+3. 서비스 로케이터 (Service Locator)
+
+### 의존 주입 (Dependency Injection)
+
+![이미지](https://Funncy.github.io/assets/img/oop/8.png 'oop')
+
+- 생성자를 통해 의존을 주입 하는 방식
+
+> 위와 같이 의존 주입을 하게 되면
+> 의존하는 객체의 파라미터 변경등 다양한 변경에서 수정할 사항이 발생하지 않는다.
+
+> 추가적으로 의존하는 객체를 Mock으로 만들어 Test가 가능해진다.
+
+# DIP
+
+---
+
+### 고수준 모듈
+
+- 의미 있는 단일 기능 제공
+- 상위 수준 비즈니스 로직 구현
+
+### 저수준 모듈
+
+- 고수준 모듈의 기능의 하위 기능을 구현
+
+### 고수준이 저수준에 직접 의존하면 발생하는 문제
+
+---
+
+- 저수준 모듈의 변경이 고수준 모듈에 영향을 끼친다.
+
+  ![이미지](https://Funncy.github.io/assets/img/oop/9.png 'oop')
+
+  전체 비즈니스 로직은 변경되지 않았지만 저수준의 구현 방식 변경으로 (nas에서 s3로 변경되었다)
+  고수준 모듈도 코드를 수정해야한다.
+
+> 위와 같은 문제를 해결하기 위해 **의존 역전 원칙**이 나왔다.
+
+### 의존 역전 원칙 (Dependency Inversion Principle)
+
+---
+
+![이미지](https://Funncy.github.io/assets/img/oop/10.png 'oop')
+
+- 고수준 모듈은 저수준 모듈의 구현에 의존하지 말고 인터페이스에 의존해야 한다.
+
+이렇게 되면 저수준의 변경은 인터페이스로 숨겨지기 때문에 고수준 모듈은 변경이 일어나지 않는다.
+
+> 이렇게 되면 변경의 유연함을 높여준다.
+> 전략패턴처럼 다른 구현체를 바꿔넣어줘도 고수준 모듈은 변경사항이 없다.
