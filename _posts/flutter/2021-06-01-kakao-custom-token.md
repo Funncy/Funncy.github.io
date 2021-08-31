@@ -28,8 +28,14 @@ firebase init을 통해서 프로젝트를 생성하는 부분은 넘어가도�
 해당 파일을 프로젝트에 넣은 뒤 아래 명령어로 환경 변수를 설정해주자.
 
 ```jsx
-firebase functions:config:set service_account=$(cat service_account.json)
+firebase functions:config:set service_account="$(cat service_account.json)"
 ```
+
+> json 파일은 firebase 웹에서 다운받아주자.
+
+> 꼭 ""을 넣어주자 안넣으면 에러난다. 
+"$(< service_account.json)"으로도 가능하다.
+
 
 ### 전체 로직
 
