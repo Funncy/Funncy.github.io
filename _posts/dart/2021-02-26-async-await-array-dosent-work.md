@@ -1,9 +1,9 @@
 ---
 layout: post
-title: '[Dart] -  async/await 가 Array 함수(map, forEach, filter..) 에서 동작 안할 때 '
-subtitle: 'dart - aasync/await doesn't work in Array method(map, forEach, filter..) cycle'
+title: '[Dart] -  async/await 배열 함수 '
+subtitle: 'dart - async/await in array function'
 categories: programming
-tags: programming dart async await array list map forEach filter 
+tags: dart async await array list map forEach filter 
 comments: true
 ---
 
