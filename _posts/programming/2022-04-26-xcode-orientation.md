@@ -17,8 +17,8 @@ comments: true
 그런데 Xcode에는 아래와 같은 옵션뿐이였다...
 
 
-![이미지](https://Funncy.github.io/assets/img/0426/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-04-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.06.23.png "xcode orientation 설정")
+![이미지](https://Funncy.github.io/assets/img/0426/스크린샷_2022-04-26_오전_11.06.23 "xcode orientation 설정")
 
 찾아보니 info.plist에서 아래와 같이 분기로 설정이 가능했다.
 
-![이미지](https://Funncy.github.io/assets/img/0426/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-04-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.07.10.png "xcode orientation info.plist")
+![이미지](https://Funncy.github.io/assets/img/0426/스크린샷_2022-04-26_오전_11.07.10"xcode orientation info.plist")
