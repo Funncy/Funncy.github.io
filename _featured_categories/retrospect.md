@@ -1,8 +1,8 @@
 
 ---
 layout: list
-title: 회고
-slug: 회고
+title: Retrospect
+slug: retrospect
 menu: true
 submenu: false
 order: 1
